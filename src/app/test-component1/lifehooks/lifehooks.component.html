@@ -1,0 +1,15 @@
+<div class="demo">
+  <h3>Lifecycle Hooks Demo</h3>
+  <p>Counter (from interval started in ngOnInit): <strong>{{ counter }}</strong></p>
+  <p class="hint">Navigate away and back — the interval is cleared in ngOnDestroy.</p>
+
+  <div class="log-box">
+    <div class="log-header">
+      <span>Lifecycle Log</span>
+      <button (click)="clearLog()">Clear</button>
+    </div>
+    <div *ngFor="let entry of log" class="log-entry">{{ entry }}</div>
+    <div *ngIf="log.length === 0" class="log-entry muted">Log cleared.</div>
+  </div>
+</div>
+

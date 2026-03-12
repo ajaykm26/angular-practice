@@ -1,0 +1,40 @@
+import { CommonModule } from '@angular/common';
+import { Component, OnDestroy,OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-lifehooks',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './lifehooks.component.html',
+  styleUrls: ['./lifehooks.component.scss']
+})
+export class LifehooksComponent implements OnInit , OnDestroy {
+
+  log: string[] = [];
+  counter = 0;
+  private intervalId: any;
+
+  constructor() { 
+    this.addLog('constructor() - Class instantiated, DI ready');
+  }
+
+  ngOnInit(): void {
+    this.addLog('LifehooksComponent initialized');
+    
+  }
+
+  ngOnDestroy(): void {
+    this.addLog('LifehooksComponent destroyed');
+      // Simulate a timer to demonstrate ngOnDestroy cleanup
+    this.intervalId = setInterval(() => {
+      this.counter++;
+    }, 1000);
+  }
+  private addLog(msg: string): void {
+    this.log = [...this.log.slice(-9), `${new Date().toLocaleTimeString()}: ${msg}`];
+  }
+
+  clearLog(): void {
+    this.log = [];
+  }
+}

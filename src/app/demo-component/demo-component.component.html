@@ -1,0 +1,7 @@
+<h2>Components & Templates</h2>
+<div class="topic-grid">
+  <a *ngFor="let t of topics" [routerLink]="t.path" class="topic-card">
+    <h3>{{ t.title }}</h3>
+    <p>{{ t.desc }}</p>
+  </a>
+</div>
