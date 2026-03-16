@@ -2,15 +2,17 @@ import { Component } from '@angular/core';
 import { Routes, RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LifehooksComponent } from '../test-component1/lifehooks/lifehooks.component';
+import { ParentComponentComponent } from '../parent-component/parent-component.component';
 
 export const routes: Routes = [
-  { path: 'lifecycle', component: LifehooksComponent }
+  { path: 'lifecycle', component: LifehooksComponent },
+  { path: 'input-output', component: ParentComponentComponent }
 ];
 
 @Component({
   selector: 'app-demo-component',
   standalone: true,
-  imports: [LifehooksComponent, RouterOutlet, RouterLink, CommonModule],
+  imports: [LifehooksComponent, RouterOutlet, RouterLink, CommonModule,ParentComponentComponent],
   templateUrl: './demo-component.component.html',
   styleUrls: ['./demo-component.component.scss']
 })

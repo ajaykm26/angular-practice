@@ -1,0 +1,9 @@
+<div class="child-box">
+  <p>Received from parent: <strong>{{ message }}</strong></p>
+  <button (click)="sendToParent()">Emit to Parent</button>
+
+  <div *ngIf="changeLog.length > 0" class="change-log">
+    <strong>ngOnChanges log:</strong>
+    <div *ngFor="let entry of changeLog">{{ entry }}</div>
+  </div>
+</div>
