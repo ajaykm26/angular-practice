@@ -2,12 +2,12 @@
   <p>Received from parent: <strong>{{ message }}</strong></p>
   <button (click)="sendToParent()">Emit to Parent</button>
 
-   @if (changeLog.length > 0) {
-     <div  class="change-log">
-        <strong>ngOnChanges Log:</strong >
-        @for (let entry of changeLog) {
-        <div>{{ entry }}</div>
-        }
-     </div>
+  @if (changeLog.length > 0) {
+  <div class="change-log">
+    <strong>ngOnChanges Log:</strong>
+    @for (entry of changeLog; track entry) {
+      <div>{{ entry }}</div>
     }
+  </div>
+}
 </div>

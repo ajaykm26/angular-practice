@@ -1,0 +1,16 @@
+<div class="demo">
+  <h3>Change Detection: OnPush Strategy</h3>
+  <p class="hint">This component uses <code>ChangeDetectionStrategy.OnPush</code></p>
+
+  <div class="section">
+    <h4>User: {{ user.name }}, Age: {{ user.age }}</h4>
+    <button (click)="mutateUser()">Mutate (may not update UI)</button>
+    <button (click)="replaceUser()">Replace Reference (updates UI)</button>
+  </div>
+
+  <div class="section">
+    <h4>Manual detectChanges()</h4>
+    <p>Counter: {{ counter }}</p>
+    <button (click)="manualDetect()">Increment & detectChanges()</button>
+  </div>
+</div>
