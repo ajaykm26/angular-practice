@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ChildComponent } from '../child/child.component';
 
+
+
 @Component({
   selector: 'app-parent-component',
   standalone: true,
@@ -15,7 +17,7 @@ export class ParentComponentComponent {
   receivedFromChild = '';
   childClickCount = 0;
 
-   onChildClicked(event: string): void {
+  onChildClicked(event: string): void {
     this.receivedFromChild = event;
     this.childClickCount++;
   }
