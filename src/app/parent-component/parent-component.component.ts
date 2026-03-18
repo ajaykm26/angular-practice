@@ -8,7 +8,7 @@ import { ChildComponent } from '../child/child.component';
 @Component({
   selector: 'app-parent-component',
   standalone: true,
-  imports: [FormsModule, ChildComponent, CommonModule],
+  imports: [FormsModule,ChildComponent,CommonModule],
   templateUrl: './parent-component.component.html',
   styleUrls: ['./parent-component.component.scss']
 })

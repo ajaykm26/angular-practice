@@ -3,16 +3,18 @@ import { Routes, RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LifehooksComponent } from '../test-component1/lifehooks/lifehooks.component';
 import { ParentComponentComponent } from '../parent-component/parent-component.component';
+import { ChangedectionComponent } from '../changedection/changedection.component';
 
 export const routes: Routes = [
   { path: 'lifecycle', component: LifehooksComponent },
-  { path: 'input-output', component: ParentComponentComponent }
+  { path: 'input-output', component: ParentComponentComponent },
+  { path: 'change-detection', component: ChangedectionComponent }
 ];
 
 @Component({
   selector: 'app-demo-component',
   standalone: true,
-  imports: [LifehooksComponent, RouterOutlet, RouterLink, CommonModule,ParentComponentComponent],
+  imports: [LifehooksComponent, RouterOutlet, RouterLink, CommonModule, ParentComponentComponent, ChangedectionComponent],
   templateUrl: './demo-component.component.html',
   styleUrls: ['./demo-component.component.scss']
 })

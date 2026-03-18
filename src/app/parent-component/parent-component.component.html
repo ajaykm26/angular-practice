@@ -1,10 +1,10 @@
 <div class="demo">
-  <h3>@Input / @Output Communication</h3>
+  <h3>&#64;Input / &#64;Output Communication</h3>
 
   <div class="section">
     <h4>Parent State</h4>
     <label>Message to child: <input [(ngModel)]="messageToChild" /></label>
-    <p *ngIf="receivedFromChild">
+    <p @if(receivedFromChild)>
       Child said: <strong>{{ receivedFromChild }}</strong> ({{ childClickCount }}x)
     </p>
   </div>
